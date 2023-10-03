@@ -22,6 +22,12 @@ public class MobileInput : MonoBehaviour
             {
                 EndTouch = Input.GetTouch(0).position;
             }
+            else if (Input.GetTouch(0).phase == TouchPhase.Stationary)
+            {
+                StartTouch = Input.GetTouch(0).position;
+                EndTouch = Input.GetTouch(0).position;                
+            }
+
             FingerDirection = (EndTouch - StartTouch).normalized;
             PlayerMovement.Rotate(FingerDirection);
         }
