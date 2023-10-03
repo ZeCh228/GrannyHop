@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb95faad711bd646b034297dc5bd47b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpPower: 8
+  JumpPower: 0
   PlayerMovement: {fileID: 1216331798}
 --- !u!135 &900560591
 SphereCollider:
@@ -742,8 +742,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -849,6 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1216331793}
+  Sensivity: 2
 --- !u!1 &1404070736
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +882,7 @@ MonoBehaviour:
   StartTouch: {x: 0, y: 0}
   EndTouch: {x: 0, y: 0}
   FingerDirection: {x: 0, y: 0}
+  PlayerMovement: {fileID: 1216331798}
 --- !u!4 &1404070738
 Transform:
   m_ObjectHideFlags: 0

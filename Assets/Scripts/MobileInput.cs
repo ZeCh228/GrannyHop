@@ -7,8 +7,8 @@ public class MobileInput : MonoBehaviour
     public Vector2 StartTouch;
     public Vector2 EndTouch;
     public Vector2 FingerDirection;
+    public PlayerMovement PlayerMovement;
 
-  
     void Update()
     {
         if (Input.touchCount > 0)
@@ -22,7 +22,8 @@ public class MobileInput : MonoBehaviour
             {
                 EndTouch = Input.GetTouch(0).position;
             }
-            FingerDirection = EndTouch - StartTouch;
+            FingerDirection = (EndTouch - StartTouch).normalized;
+            PlayerMovement.Rotate(FingerDirection);
         }
 
     }
