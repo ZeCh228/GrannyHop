@@ -6,12 +6,20 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
-    public float Sensivity;
+    public float VerticalSensivity;
+    public float HorizontalSensivity;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     private void Update()
     {
-        Vector2 rot = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Rotate(rot.normalized * Sensivity);
+
+        //Vector2 rot = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+       //Rotate(rot.normalized * Sensivity);
     }
 
     public void Jump(float Power)
@@ -23,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Rotate(Vector2 FingerDirection)
     {
-        transform.Rotate(FingerDirection*Sensivity);
+        transform.Rotate(new Vector3(FingerDirection.x * HorizontalSensivity, FingerDirection.y * VerticalSensivity, 0));
     }
 }
 //закон деметрии

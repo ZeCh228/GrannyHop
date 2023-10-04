@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MobileInput : MonoBehaviour
@@ -25,12 +26,14 @@ public class MobileInput : MonoBehaviour
             else if (Input.GetTouch(0).phase == TouchPhase.Stationary)
             {
                 StartTouch = Input.GetTouch(0).position;
-                EndTouch = Input.GetTouch(0).position;                
+                EndTouch = Input.GetTouch(0).position;
             }
 
-            FingerDirection = (EndTouch - StartTouch).normalized;
+            var direction = (EndTouch - StartTouch).normalized;
+            FingerDirection = new Vector2(direction.y * -1, direction.x);
             PlayerMovement.Rotate(FingerDirection);
         }
 
     }
 }
+
