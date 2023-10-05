@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //Vector2 rot = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-       //Rotate(rot.normalized * Sensivity);
+        //Rotate(rot.normalized * Sensivity);
     }
 
     public void Jump(float Power)
@@ -31,7 +31,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Rotate(Vector2 FingerDirection)
     {
-        transform.Rotate(new Vector3(FingerDirection.x * HorizontalSensivity, FingerDirection.y * VerticalSensivity, 0));
+        float x = transform.eulerAngles.x + FingerDirection.x * (VerticalSensivity * Time.deltaTime);
+        float y = transform.eulerAngles.y + FingerDirection.y * (HorizontalSensivity * Time.deltaTime);
+        transform.eulerAngles = new Vector3(x, y, 0);
     }
 }
-//закон деметрии
+

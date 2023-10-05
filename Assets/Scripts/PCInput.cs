@@ -6,7 +6,7 @@ public class PCInput : MonoBehaviour
 
     void Update()
     {
-        Vector2 direction = new Vector2(Input.GetAxis("Mouse Y") * -1, Input.GetAxis("Mouse X")).normalized;
+        Vector2 direction = new Vector2(Input.GetAxis("Mouse Y") * -1, Input.GetAxis("Mouse X"));
         PlayerMovement.Rotate(direction);
     }
 }
