@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Nasos : MonoBehaviour
 {
-   //„ËÚ
-
     public float JumpPower;
     public PlayerMovement PlayerMovement;
-
-    int y;
-
+   
     private void OnCollisionEnter(Collision collision) //ÕŒ–Ã¿À»»
     {
         PlayerMovement.Jump(JumpPower);
@@ -20,15 +16,7 @@ public class Nasos : MonoBehaviour
 
     private void Move()
     {
-        int x;
-        int z;
-        int v;
         
-    }
-
-    private void Stay()
-    {
-    }
-
+    }    
 
 }
