@@ -13,10 +13,11 @@ public class PlayerHealth : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            //Time.timeScale = 0;
-            //StartCoroutine(Wait());           
-            transform.position = SpawnPoint.position;
-            transform.eulerAngles = Vector3.zero;
+            //Time.timeScale = 0f;
+            StartCoroutine(Wait());
+            
+            //transform.position = SpawnPoint.position;
+            //transform.eulerAngles = Vector3.zero;
             //Time.timeScale = 1;
             //rb.velocity = Vector3.zero;
             //rb.isKinematic = true;           
@@ -24,11 +25,23 @@ public class PlayerHealth : MonoBehaviour
             //rb.useGravity = true;
         }
     }
+    IEnumerator Wait()
+    {        
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(1f);
+        Time.timeScale = 1f;
+        transform.position = SpawnPoint.position;
+        transform.eulerAngles = Vector3.zero;
+        Debug.Log("Stop2sec");        
+    }
 
-    /*public IEnumerator Stop2sec() 
+    /*public IEnumerator Wait() 
     {
-        if(gameObject.CompareTag("Obstacle"))
+        //if(gameObject.CompareTag("Obstacle"))
     yield return new WaitForSeconds(2f);
+
+        transform.position = SpawnPoint.position;
+        transform.eulerAngles = Vector3.zero;
         Debug.Log("Stop2sec");
     }*/
 
