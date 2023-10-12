@@ -9,13 +9,21 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] Rigidbody NasosRB;
 
+    /*private Coroutine healCor;*/
+
     private void OnCollisionEnter(Collision collision) 
     {        
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             print($"Collision With {collision.gameObject.name}");
             //Time.timeScale = 0f;
-            StartCoroutine(Wait());            
+            StartCoroutine(Wait());
+            /*if (healCor != null)
+            {
+                StopCoroutine(healCor);
+            }
+
+            healCor = StartCoroutine(Wait());*/
         }
     }
     IEnumerator Wait()
@@ -28,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
         rb.velocity = Vector3.zero;
         NasosRB.velocity = Vector3.zero;
 
-        Debug.Log("Stop2sec");        
+        Debug.Log("Stop2sec");
+        /*healCor = null;*/
     }  
 }

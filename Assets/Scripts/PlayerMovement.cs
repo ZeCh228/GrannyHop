@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public float VerticalSensivity;
     public float HorizontalSensivity;
 
-    private void Start()
+    /*private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-    }
+    }*/
 
     private void Update()
     {

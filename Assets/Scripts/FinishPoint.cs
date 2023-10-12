@@ -9,11 +9,13 @@ public class FinishPoint : MonoBehaviour
     [SerializeField] PlayerMovement Rotate;
     [SerializeField] PCInput PCInput;
     [SerializeField] MobileInput MobileInput;
+   
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            
             rb.isKinematic = true;
             Rotate.enabled = false;
             PCInput.enabled = false;
