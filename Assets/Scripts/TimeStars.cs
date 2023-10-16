@@ -6,24 +6,29 @@ public class TimeStars : MonoBehaviour
 {
     private float time;
     [SerializeField] float MiddleTime;
-   
-    public int CalculateStars() 
+
+    public int CalculateStars()
     {
         GetTime();
-        var StarsCount = 1;
-        if(time - MiddleTime > 15) 
+        var StarsCount = 1; //уменьшить арифметику не понимаю как, не стал писать в выходной
+
+        var result = time - MiddleTime;
+
+        if (result > 15)
         {
-            return StarsCount;
+            StarsCount = 2;
         }
-        else if(time - MiddleTime < -15) 
+        else if (result < -15)
         {
-            return StarsCount = 3;
+            StarsCount = 3;
         }
-        else 
-        {
-            return StarsCount = 2;
-        }        
+
+        return StarsCount;
     }
+    /*установил дефолт значение кол-во звёзд, ибо игрок всегда получит 1 звезду
+    и затем если уровень пройден дольше 15 сек, то две звезды, если меньше, то 3
+    в конце вернул значение ретёрн, может неверно, но сократил до одного значения ретёрн
+    не стал писать в выходной)*/
 
     public float GetTime()
     {
