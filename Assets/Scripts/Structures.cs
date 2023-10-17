@@ -33,12 +33,12 @@ public class Structures : MonoBehaviour
         }
         
 
-        
-        
-    
-            for (int i = 0; i < Enemies.Length; i++) 
+
+
+
+        for (int i = 0; i < Enemies.Length; i++) // дестрой четных 
         {
-            if (Enemies[i] % 2 == 0) 
+            if (i % 2 == 0) 
             {               
                 Destroy(Enemies[i]);
             }
