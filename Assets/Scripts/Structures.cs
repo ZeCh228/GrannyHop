@@ -1,35 +1,48 @@
+using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Structures : MonoBehaviour
 {
     [SerializeField] GameObject[] Enemies;
-    [SerializeField] GameObject[] Orcs;
+
 
 
 
     private void Start()
     {
-        var orcsCount = 0;
-
-        foreach (GameObject enemy in Enemies)
+        /*for (int i = 0; i < Enemies.Length; i++)  //вывод массива в консоль
         {
-            if (enemy.name.StartsWith("Orc"))
-            {
-                orcsCount++;
-            }
+            Debug.Log(Enemies[i]);
         }
 
-        Orcs = new GameObject[orcsCount];
-
-        var orcsIndex = 0;
-
-        for (int i = 0; i < Enemies.Length; i++)
+        
+        for (int i = Enemies.Length - 1; i >= 0; i--) //инверсия массива в консоли
         {
-            if (Enemies[i].name.StartsWith("Orc"))
-            {
-                Orcs[orcsIndex] = Enemies[i];
-                orcsIndex++;
+            Debug.Log(Enemies[i]);
+        
+        
+        int EnemiesLength = Enemies.Length; //инверсия массива в инспекторе  
+        int HalfEnemyLength = EnemiesLength / 2;
+        GameObject temp;
+        for (int i = 0; i < HalfEnemyLength; i++) 
+        {
+            temp = Enemies[i];
+            Enemies[i] = Enemies[EnemiesLength - i - 1];
+            Enemies[EnemiesLength - i - 1] = temp;
+        }
+        
+
+        
+        
+    
+            for (int i = 0; i < Enemies.Length; i++) 
+        {
+            if (Enemies[i] % 2 == 0) 
+            {               
+                Destroy(Enemies[i]);
             }
         }
+        */
     }
 }
