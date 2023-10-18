@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CompleteLvlCanvas : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject[] Stars;
+    [SerializeField] TextMeshProUGUI Time;
+    
 
-    // Update is called once per frame
-    void Update()
+    public void EnableCanvas(float time, int stars) 
     {
-        
+        Time.SetText(time.ToString());
+
+        for(int i = 0; i < stars; i++) 
+        {
+            Stars[i].SetActive(true);
+        }
     }
 }

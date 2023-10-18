@@ -11,38 +11,47 @@ public class Structures : MonoBehaviour
 
     private void Start()
     {
-        /*for (int i = 0; i < Enemies.Length; i++)  //вывод массива в консоль
-        {
-            Debug.Log(Enemies[i]);
-        }
 
-        
-        for (int i = Enemies.Length - 1; i >= 0; i--) //инверсия массива в консоли
-        {
-            Debug.Log(Enemies[i]);
-        
-        
-        int EnemiesLength = Enemies.Length; //инверсия массива в инспекторе  
-        int HalfEnemyLength = EnemiesLength / 2;
-        GameObject temp;
-        for (int i = 0; i < HalfEnemyLength; i++) 
-        {
-            temp = Enemies[i];
-            Enemies[i] = Enemies[EnemiesLength - i - 1];
-            Enemies[EnemiesLength - i - 1] = temp;
-        }
-        
+        int a = -5;
+        int b = 4;
+        int brecets = (a / b);
+        int result = a - brecets * b;
+        Debug.Log(result + "/" + brecets);
+
+        // for (int i = 0; i < Enemies.Length; i++)  //вывод массива в консоль
+        //{
+        //    Debug.Log(Enemies[i]);
+        // }
 
 
+        //for (int i = Enemies.Length - 1; i >= 0; i--) //инверсия массива в консоли
+        //{
+        //     Debug.Log(Enemies[i]);
+
+        // }
+
+        // int EnemiesLength = Enemies.Length; //инверсия массива в инспекторе  
+        //int HalfEnemyLength = EnemiesLength / 2;
+        // GameObject temp;
+        // for (int i = 0; i < HalfEnemyLength; i++)
+        // {
+        //    temp = Enemies[i];
+        //     Enemies[i] = Enemies[EnemiesLength - i - 1];
+        //    Enemies[EnemiesLength - i - 1] = temp;
+        // }
 
 
-        for (int i = 0; i < Enemies.Length; i++) // дестрой четных 
-        {
-            if (i % 2 == 0) 
-            {               
-                Destroy(Enemies[i]);
-            }
-        }
-        */
+
+
+
+        //for (int i = 0; i < Enemies.Length; i++) // дестрой четных 01
+        // {
+        //     if (i % 2 != 0)
+        //     {
+        //         Destroy(Enemies[i]);
+        //    }
+        // }
+
+        //  }
     }
 }
