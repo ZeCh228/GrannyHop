@@ -9,18 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float VerticalSensivity;
     public float HorizontalSensivity;
 
-    /*private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }*/
-
-    private void Update()
-    {
-        //Vector2 rot = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        //Rotate(rot.normalized * Sensivity);
-    }
-
     public void Jump(float Power)
     {
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);

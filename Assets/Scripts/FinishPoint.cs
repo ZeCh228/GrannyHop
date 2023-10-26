@@ -9,7 +9,9 @@ public class FinishPoint : MonoBehaviour
     [SerializeField] PlayerMovement Rotate;
     [SerializeField] PCInput PCInput;
     [SerializeField] MobileInput MobileInput;
-   
+    [SerializeField] CompleteLvlCanvas canvas;  
+    [SerializeField] TimeStars TimeStars;  
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +23,8 @@ public class FinishPoint : MonoBehaviour
             PCInput.enabled = false;
             MobileInput.enabled = false;
             Debug.Log("Finish");
+
+            canvas.EnableCanvas(TimeStars.GetTime(), TimeStars.CalculateStars());
         }
 
         

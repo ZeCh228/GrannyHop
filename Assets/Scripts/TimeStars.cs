@@ -6,21 +6,26 @@ public class TimeStars : MonoBehaviour
 {
     private float time;
     [SerializeField] float MiddleTime;
+    [SerializeField] float AdditionalTime = 10;
 
     public int CalculateStars()
     {
         GetTime();
-        var StarsCount = 1; //уменьшить арифметику не понимаю как, не стал писать в выходной
+        var StarsCount = 0; //уменьшить арифметику не понимаю как, не стал писать в выходной
 
-        var result = time - MiddleTime;
+        //var result = time - MiddleTime;
 
-        if (result > 15)
-        {
-            StarsCount = 2;
-        }
-        else if (result < -15)
+        if (time < MiddleTime)
         {
             StarsCount = 3;
+        }
+        else if (time > MiddleTime+AdditionalTime)
+        {
+            StarsCount = 1;
+        }
+        else 
+        {
+            StarsCount = 2;
         }
 
         return StarsCount;
