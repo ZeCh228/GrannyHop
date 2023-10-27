@@ -15,12 +15,19 @@ public class Structures : MonoBehaviour
     /// <returns></returns>
     private bool Contains(int x)
     {
+        for (int i = 0; i < x; i++) 
+        {
+            if (numbers[i] == x) 
+            {
+                return true;
+            }            
+        }
+        return false;
         //1) создать цикл for, итерации должны пройти максимальное кол-во элементов в массиве или пока не найдёт число, которое ввёл пользователь (это то самое int x)
         //2) проверить если: нужно обратиться сначала к массиву, затем к элементу массива[i] и сравнить его на строгое равенство с int x
         //3) если проверка true, то в этом случае return true
         //4) если проверка false, то цикл продолжится
-        //5) если цикл закончился ни разу не вернув true, то return false !!!ПОСЛЕ ЦИКЛА!!!
-        return false;
+        //5) если цикл закончился ни разу не вернув true, то return false !!!ПОСЛЕ ЦИКЛА!!!        
     }
 
 
@@ -38,7 +45,7 @@ public class Structures : MonoBehaviour
         res2 = Contains(10);
         print($"10 | {res2}");
 
-        res3 = Contains(10);
+        res3 = Contains(0);
         print($"10 | {res3}");
 
 
