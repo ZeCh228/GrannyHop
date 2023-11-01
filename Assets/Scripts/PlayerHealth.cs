@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private Transform SpawnPoint;
     [SerializeField] Rigidbody rb;
-    [SerializeField] Rigidbody NasosRB;
+   /* [SerializeField] Rigidbody NasosRB;*/
 
     /*private Coroutine healCor;*/
 
@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
        transform.position = SpawnPoint.position;
         transform.rotation = Quaternion.Euler(Vector3.zero);
         rb.velocity = Vector3.zero;
-        NasosRB.velocity = Vector3.zero;
+/*        NasosRB.velocity = Vector3.zero;*/
 
         Debug.Log("Stop2sec");
         /*healCor = null;*/

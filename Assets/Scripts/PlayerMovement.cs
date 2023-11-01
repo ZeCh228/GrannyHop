@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private int _minXRotation;
+    [SerializeField] private int _maxXRotation;
     public Rigidbody rb;
     public float VerticalSensivity;
     public float HorizontalSensivity;
+    private float currentPitch;
 
     public void Jump(float Power)
     {
@@ -15,11 +19,15 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(transform.up * Power, ForceMode.VelocityChange); //режимы силы 
     }
 
-    public void Rotate(Vector2 FingerDirection)
+    public void Rotate(Vector2 direction)
     {
-        float x = transform.eulerAngles.x + FingerDirection.x * (VerticalSensivity * Time.deltaTime);
-        float y = transform.eulerAngles.y + FingerDirection.y * (HorizontalSensivity * Time.deltaTime);
-        transform.eulerAngles = new Vector3(x, y, 0);
+        float y = transform.eulerAngles.y + direction.y * (HorizontalSensivity * Time.deltaTime);
+        float rotationInputX = direction.x * VerticalSensivity * Time.deltaTime;
+        currentPitch -= rotationInputX;
+        currentPitch = Mathf.Clamp(currentPitch, _minXRotation, _maxXRotation);
+
+        Quaternion rotation = Quaternion.Euler(currentPitch, y, 0);
+        transform.rotation = rotation;
     }
 }
 
