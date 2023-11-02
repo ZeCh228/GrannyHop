@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -156,10 +157,15 @@ public class Structures : MonoBehaviour
         NewArray[NewArray.Length - 1] = x;
         numbers = NewArray;
     }*/
+        int x = 5 * (int)proverka.global;
+        print(x); 
     }
 }
 
-
+public enum proverka
+{
+global = 10
+}
 
 
 
