@@ -18,12 +18,12 @@ public class Structures : MonoBehaviour
     /// <returns></returns>
     private bool Contains(int x)
     {
-        for (int i = 0; i < numbers.Length; i++) 
+        for (int i = 0; i < numbers.Length; i++)
         {
-            if (numbers[i] == x) 
+            if (numbers[i] == x)
             {
                 return true;
-            }            
+            }
         }
         return false;
         //1) создать цикл for, итерации должны пройти максимальное кол-во элементов в массиве или пока не найдёт число, которое ввёл пользователь (это то самое int x)
@@ -36,8 +36,34 @@ public class Structures : MonoBehaviour
 
 
 
+    private (float, Vector3) CalculateJump2() 
+    {
+        return (10.5f, Vector3.zero);
+    }
+
+
+    private void CalculateJump(out float force, out Vector3 direction)
+    {
+        direction = Vector3.zero;
+        force = 0f;
+    }
+
+    private void ApplyJumpForce(float force, Vector3 direction, int x = 0 )
+    {
+
+    }
+
     private void Start()
     {
+        float force = 0;
+        Vector3 direction = Vector3.zero;
+        CalculateJump(out  force, out  direction);
+        ApplyJumpForce(force, direction, 20);
+            
+
+        
+
+
         numbers = new int[] { 1, 25, 4, 5, 9, 10, 8, 4, -1, 0 };
 
         bool res1, res2, res3;
@@ -51,7 +77,7 @@ public class Structures : MonoBehaviour
         res3 = Contains(0);
         print($"10 | {res3}");
 
-        if (ReferenceEquals(password,userInput))
+        if (ReferenceEquals(password, userInput))
         {
             print("Unlock!");
         }
@@ -158,13 +184,15 @@ public class Structures : MonoBehaviour
         numbers = NewArray;
     }*/
         int x = 5 * (int)proverka.global;
-        print(x); 
+        print(x);
     }
+
+
 }
 
 public enum proverka
 {
-global = 10
+    global = 10
 }
 
 
