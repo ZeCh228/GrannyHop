@@ -3,6 +3,7 @@
 public class PCInput : MonoBehaviour
 {
     public PlayerMovement PlayerMovement;
+    public CameraRotation cameraRotation;
 
     private void Start()
     {
@@ -13,7 +14,9 @@ public class PCInput : MonoBehaviour
     void Update()
     {
         Vector2 direction = new Vector2(Input.GetAxis("Mouse Y") * -1, Input.GetAxis("Mouse X"));
-        PlayerMovement.Rotate(direction);
+        Debug.Log(direction);
+        PlayerMovement.Rotate(direction); 
+        cameraRotation.Rotate(direction);
     }
 }
 

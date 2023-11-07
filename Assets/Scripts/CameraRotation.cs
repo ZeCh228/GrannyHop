@@ -1,31 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-using UnityEngine.UIElements;
+ï»¿using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class CameraRotation : MonoBehaviour
 {
     [SerializeField] private int _minXRotation;
     [SerializeField] private int _maxXRotation;
-    [SerializeField] private float _accelerationReducer;
-    public Rigidbody rb;
-    public float VerticalSensivity;
-    public float HorizontalSensivity;
+    [SerializeField] float VerticalSensivity;
+    [SerializeField] float HorizontalSensivity;
+    [SerializeField] Transform target;
+    [SerializeField] Transform camera;
     private float currentPitch;
-
 
     public void ResetRotation(float y)
     {
         currentPitch = 0;
-        transform.rotation = Quaternion.Euler(0,y,0);
+        transform.rotation = Quaternion.Euler(0, y, 0);
     }
 
-    public void Jump(float Power)
-    {
-        rb.velocity = new Vector3(rb.velocity.x* _accelerationReducer, 0, rb.velocity.z* _accelerationReducer);
-        rb.AddForce(transform.up * Power, ForceMode.VelocityChange); //ðåæèìû ñèëû 
-    }
 
     public void Rotate(Vector2 direction)
     {
