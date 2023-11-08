@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(float Power)
     {
-        rb.velocity = new Vector3(rb.velocity.x* _accelerationReducer, 0, rb.velocity.z* _accelerationReducer);
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(transform.up * Power, ForceMode.VelocityChange); //режимы силы 
     }
 
