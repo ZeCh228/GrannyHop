@@ -20,8 +20,7 @@ public class Dead : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player")) 
-        {
-           
+        {           
             PlayerHealth.DeadRespawn();
         }
     }
