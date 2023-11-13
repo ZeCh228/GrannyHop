@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
 public class Dead : MonoBehaviour
 {
     [SerializeField] PlayerHealth PlayerHealth;
+    
 
     private void OnValidate()
     {      
@@ -19,6 +21,7 @@ public class Dead : MonoBehaviour
     {
         if (collider.CompareTag("Player")) 
         {
+           
             PlayerHealth.DeadRespawn();
         }
     }

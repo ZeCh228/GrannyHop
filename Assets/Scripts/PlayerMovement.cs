@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(float Power)
     {
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        rb.AddForce(transform.up * Power, ForceMode.VelocityChange); //режимы силы 
+        rb.AddForce(transform.up * Power, ForceMode.VelocityChange);
     }
 
     public void Rotate(Vector2 direction)
@@ -36,6 +36,73 @@ public class PlayerMovement : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(currentPitch, y, 0);
         transform.rotation = rotation;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public float elasticityCoefficient = 1.0f; // коэффициент упругости, можно настроить в инспекторе
+    public float gravity = 9.83f; // гравитаци€
+
+    private float initialHeight; // начальна€ высота погостика перед отскоком
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        initialHeight = transform.position.y; // сохранить начальную высоту
+    }
+
+    private void Update()
+    {
+        // ѕолучить текущую высоту и нормаль поверхности под погостиком
+        float currentHeight = transform.position.y;
+        Vector3 surfaceNormal = GetSurfaceNormal();
+
+        // –ассчитать силу отскока
+        float bounceForce = CalculateBounceForce(currentHeight, surfaceNormal);
+
+        // ѕрименить гравитацию
+        Vector3 gravityForce = Vector3.down * gravity /** rb.mass*/;
+        rb.AddForce(gravityForce);
+
+        // ѕрименить силу отскока
+        //TODO: fixupdate
+        rb.AddForce(bounceForce * surfaceNormal, ForceMode.Force);
+    }
+
+    private float CalculateBounceForce(float currentHeight, Vector3 surfaceNormal)
+    {
+        float bounceForce = elasticityCoefficient * (currentHeight - initialHeight);
+        return bounceForce;
+    }
+
+    private Vector3 GetSurfaceNormal()
+    {
+        //TODO: check
+
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit))
+        {
+            return hit.normal;
+        }
+
+        return Vector3.up; // возвращаем вектор вверх, если не удалось определить нормаль
     }
 }
 

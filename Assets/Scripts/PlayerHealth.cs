@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private CameraRotation LookAt;
     [SerializeField] private PlayerMovement Movement;
     [SerializeField] Rigidbody rb;
+    [SerializeField] int PlayerDead;
+    [SerializeField] TextMeshProUGUI DeadUI;
 
     private void Start()
     {
@@ -21,12 +24,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            StartCoroutine(Wait());
+            DeadRespawn();
         }
     }
 
     public void DeadRespawn() 
     {
+        PlayerDead += 1;
+        DeadUI.SetText(PlayerDead.ToString());
         StartCoroutine(Wait());
     }
 

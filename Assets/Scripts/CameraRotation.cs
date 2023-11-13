@@ -2,6 +2,7 @@
 
 public class CameraRotation : MonoBehaviour
 {
+
     [SerializeField] private int _minXRotation;
     [SerializeField] private int _maxXRotation;
     [SerializeField] float VerticalSensivity;
