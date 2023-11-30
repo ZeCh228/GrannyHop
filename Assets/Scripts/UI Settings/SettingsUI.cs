@@ -49,9 +49,9 @@ public class SettingsUI : MonoBehaviour
     }
 
 
-    public void DefSens() 
+    public void DefaultSensa() 
     {
         PlayerPrefs.SetFloat("Sensivity", DefaultSensivity);
-        //UpdateSensivityUI(Sensivity);
+        UpdateSensivityUI(PlayerPrefs.GetFloat("Sensivity", DefaultSensivity));
     }
 }
