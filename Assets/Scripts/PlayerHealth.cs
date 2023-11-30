@@ -14,23 +14,39 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] int PlayerDead;
     [SerializeField] TextMeshProUGUI DeadUI;
+    [SerializeField] int DeadCountUiStart;
+    [SerializeField] Animation AnimationDeadUI;
+    [SerializeField] AudioSystem AudioSystem;
+
 
     private void Start()
     {
         Spawn();
     }
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            if (collision.gameObject.TryGetComponent(out FloorMaterialVoice floorMaterialVoice))
+            {
+                AudioSystem.PlayAudio(floorMaterialVoice.FloorMaterial);
+            }
+            else
+            {
+                AudioSystem.PlayDefAudio(collision.gameObject.name);
+            }
+            
             DeadRespawn();
         }
     }
+    
 
     public void DeadRespawn() 
     {
         PlayerDead += 1;
+        DeadAnimationCount();
         DeadUI.SetText(PlayerDead.ToString());
         StartCoroutine(Wait());
     }
@@ -43,6 +59,17 @@ public class PlayerHealth : MonoBehaviour
         Time.timeScale = 1f;
         Spawn();
     }
+
+
+    private void DeadAnimationCount()
+    {
+        if (PlayerDead % DeadCountUiStart==0) 
+        {
+            AnimationDeadUI.Play("New Animation");
+        }
+    }
+
+
 
     private void Spawn()
     {

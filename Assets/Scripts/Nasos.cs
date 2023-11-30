@@ -1,7 +1,10 @@
 using Cinemachine.Utility;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.ProBuilder;
+using static UnityEditor.PlayerSettings;
 
 public class Nasos : MonoBehaviour
 {   
@@ -10,47 +13,69 @@ public class Nasos : MonoBehaviour
     [SerializeField] Transform spherePoint;
     [SerializeField] float sphereRadius;
     [SerializeField] LayerMask groundMask;
-       
+    [SerializeField] AudioSystem AudioSystem;
+    [SerializeField] float JumpReload;
+    private bool IsJumpAllowed = true;
+    [SerializeField] LayerMask groundLayer;
+
     private void FixedUpdate()
     {
-        var colliders = Physics.OverlapSphere(spherePoint.position, sphereRadius, groundMask);
-
-        if (colliders.Length > 0)
+        if (IsJumpAllowed) 
         {
-            PlayerMovement.Jump(JumpPower);
-        }
+            var colliders = Physics.OverlapSphere(spherePoint.position, sphereRadius, groundMask);
+
+            if (colliders.Length > 0)
+            {
+                if (colliders[0].TryGetComponent(out FloorMaterialVoice floorMaterialVoice))
+                {
+                    AudioSystem.PlayAudio(floorMaterialVoice.FloorMaterial);
+                }
+                else
+                {
+                    AudioSystem.PlayDefAudio(colliders[0].name);
+                }
+                PlayerMovement.Jump(JumpPower);
+
+                if (Physics.Raycast(transform.position,Vector3.down,out RaycastHit info, 20, groundLayer))
+                {
+                    DebugDirections.Instance.StartDirections.Add(info.point);                    
+                }
+
+                
+                StartCoroutine(JumpCoolDown());
+            }
+        }       
     }
 
-
+    private IEnumerator JumpCoolDown() 
+    {
+        IsJumpAllowed = false;
+        yield return new WaitForSeconds(JumpReload);
+        IsJumpAllowed = true;
+    }
 
     
     
     
 }
-    /*public Rigidbody rb;
-    [SerializeField] float Elastic = 1f;
-    [SerializeField] float Gravity = 10f;
-    [SerializeField] float DefaultHeight = 1f;
 
-    private void Start()
-    {
-        DefaultHeight = transform.position.y;
 
-    }
 
-    private void Update()
-    {
-        float CurrentHeight = transform.position.y;
-        Vector3 Normalii = Normal();
-    }
 
-    private Vector3 Normal() 
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down,out hit)) 
-        {
-            return hit.normal;
-        }
-        return Vector3.up;
-    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

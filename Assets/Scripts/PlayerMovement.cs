@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private int _minXRotation;
     [SerializeField] private int _maxXRotation;
-    [SerializeField] private float _accelerationReducer;
+    [Range(0,1)][SerializeField] private float _accelerationReducer;
     public Rigidbody rb;
     public float VerticalSensivity;
     public float HorizontalSensivity;
@@ -23,8 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(float Power)
     {
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        //rb.velocity = new Vector3(0, 0, 0);
+        // rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x * _accelerationReducer, 0, rb.velocity.z * _accelerationReducer);
+        
         rb.AddForce(transform.up * Power, ForceMode.VelocityChange);
+        DebugDirections.Instance.EndDirections.Add(transform.up * 2);
     }
 
     public void Rotate(Vector2 direction)
@@ -38,4 +42,7 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = rotation;
     }   
 }
+
+
+
 

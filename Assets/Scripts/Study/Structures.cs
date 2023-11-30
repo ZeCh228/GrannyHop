@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -8,10 +9,33 @@ public class Structures : MonoBehaviour
     //[SerializeField] GameObject[] Enemies;   
     [SerializeField] int SumNumbers;//тут будет хранитbся вся сумма массива первого задания
     [SerializeField] int[] numbers;
-
+    [SerializeField] GameObject[] cube;
     [SerializeField] string password;
     [SerializeField] string userInput;
+    [SerializeField] List<GameObject> cubes;
+
+
+
+
+
+    private void Awake()
+    {
+        cubes = new List<GameObject>(10); //начать отсюда 
+    }
+
+
+
+
+
+
+
+
+
+
     /// <summary>
+    /// 
+    /// 
+    /// 
     /// функция ищет число в массиве и возвращает True, если оно найдено и false, если не найдено
     /// </summary>
     /// <param name="x"></param>
@@ -59,9 +83,15 @@ public class Structures : MonoBehaviour
         Vector3 direction = Vector3.zero;
         CalculateJump(out  force, out  direction);
         ApplyJumpForce(force, direction, 20);
-            
 
-        
+
+        for (int i = 0;i < cube.Length;i++) 
+        {
+            if (i%2 == 1) 
+            {
+                Destroy(cube[i]);
+            }
+        }
 
 
         numbers = new int[] { 1, 25, 4, 5, 9, 10, 8, 4, -1, 0 };
