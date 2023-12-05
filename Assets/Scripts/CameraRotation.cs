@@ -8,8 +8,18 @@ public class CameraRotation : MonoBehaviour
     [SerializeField] float VerticalSensivity;
     [SerializeField] float HorizontalSensivity;
     [SerializeField] Transform target;
-    [SerializeField] Transform camera;
+    
+    private float TotalSensivity;
     private float currentPitch;
+
+    
+    public void SettingsSet(float Sensivity) 
+    {
+        TotalSensivity = Sensivity;
+        VerticalSensivity *= TotalSensivity;
+        HorizontalSensivity *= TotalSensivity;
+    }
+
 
     public void ResetRotation(float y)
     {

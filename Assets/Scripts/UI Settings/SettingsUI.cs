@@ -7,8 +7,7 @@ public class SettingsUI : MonoBehaviour
 {
     [SerializeField] Slider SliderSensivity;
     [SerializeField] TMP_InputField SensivityInputField;
-    [SerializeField] decimal MaxSensivity;
-    [SerializeField] float DefaultSensivity;
+    [SerializeField] SettingsLoader settingsLoader;
 
    public void UpdateInputFieeldSensivityByScrollBar(float Sensivity) 
     {        
@@ -20,9 +19,9 @@ public class SettingsUI : MonoBehaviour
     {
         decimal.TryParse(value, out decimal result);
 
-        if(result > MaxSensivity) 
+        if(result > settingsLoader.MaxSensivity) 
         {
-            result = MaxSensivity;
+            result = settingsLoader.MaxSensivity;
         }
 
         SensivityInputField.SetTextWithoutNotify(Math.Round(result, 2).ToString());
@@ -38,7 +37,7 @@ public class SettingsUI : MonoBehaviour
 
     public void LoadSettingsToUpdateUI()
     {
-        float Sensivity = PlayerPrefs.GetFloat("Sensivity", DefaultSensivity);
+        float Sensivity = PlayerPrefs.GetFloat("Sensivity", settingsLoader.DefaultSensivity);
         UpdateSensivityUI(Sensivity);
     }
 
@@ -51,7 +50,7 @@ public class SettingsUI : MonoBehaviour
 
     public void DefaultSensa() 
     {
-        PlayerPrefs.SetFloat("Sensivity", DefaultSensivity);
-        UpdateSensivityUI(PlayerPrefs.GetFloat("Sensivity", DefaultSensivity));
+        PlayerPrefs.SetFloat("Sensivity", settingsLoader.DefaultSensivity);
+        UpdateSensivityUI(PlayerPrefs.GetFloat("Sensivity", settingsLoader.DefaultSensivity));
     }
 }
