@@ -1764,7 +1764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2476165432433736277, guid: 1e0a223192da6884ebb17610c66af624,
     type: 3}
-  countBulletToInstantiate: 30
+  countBulletToInstantiateOnInitiolize: 0
+  countBulletToInstantiateOnExpand: 1
 --- !u!4 &1232609303
 Transform:
   m_ObjectHideFlags: 0

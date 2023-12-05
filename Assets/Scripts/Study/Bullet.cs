@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] Pool pool;
+    private Pool pool;
 
 
     public void Initialize(Pool Parents)
