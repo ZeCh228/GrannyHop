@@ -32,7 +32,8 @@ public class SettingsUI : MonoBehaviour
 
     public void SaveSettings() 
     {
-        PlayerPrefs.SetFloat("Sensivity", SliderSensivity.value);   
+        PlayerPrefs.SetFloat("Sensivity", SliderSensivity.value);
+        settingsLoader.SensivityUpdate(SliderSensivity.value);
     }
 
     public void LoadSettingsToUpdateUI()

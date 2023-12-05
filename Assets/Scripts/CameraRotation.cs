@@ -5,19 +5,22 @@ public class CameraRotation : MonoBehaviour
 
     [SerializeField] private int _minXRotation;
     [SerializeField] private int _maxXRotation;
-    [SerializeField] float VerticalSensivity;
-    [SerializeField] float HorizontalSensivity;
-    [SerializeField] Transform target;
+    [SerializeField] float BaseVerticalSensivity;
+    [SerializeField] float BaseHorizontalSensivity;    
+    [SerializeField] Transform target;   
     
     private float TotalSensivity;
     private float currentPitch;
+    private float CurrentHorizontalSensivity;
+    private float CurrentVerticalSensivity;
 
-    
     public void SettingsSet(float Sensivity) 
     {
+
         TotalSensivity = Sensivity;
-        VerticalSensivity *= TotalSensivity;
-        HorizontalSensivity *= TotalSensivity;
+        CurrentHorizontalSensivity = BaseHorizontalSensivity * TotalSensivity;
+        CurrentVerticalSensivity = BaseVerticalSensivity * TotalSensivity;
+        
     }
 
 
@@ -30,8 +33,8 @@ public class CameraRotation : MonoBehaviour
 
     public void Rotate(Vector2 direction)
     {
-        float y = transform.eulerAngles.y + direction.y * (HorizontalSensivity * Time.deltaTime);
-        float rotationInputX = direction.x * VerticalSensivity * Time.deltaTime;
+        float y = transform.eulerAngles.y + direction.y * (CurrentHorizontalSensivity * Time.deltaTime);
+        float rotationInputX = direction.x * CurrentVerticalSensivity * Time.deltaTime;
         currentPitch -= rotationInputX;
         currentPitch = Mathf.Clamp(currentPitch, _minXRotation, _maxXRotation);
 

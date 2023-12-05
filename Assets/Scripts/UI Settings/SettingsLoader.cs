@@ -9,13 +9,20 @@ public class SettingsLoader : MonoBehaviour
     [SerializeField] CameraRotation cameraRotation;
     [SerializeField] PlayerMovement playerMovement;
 
+
+    
     private void Awake()
     {
 
         float Sensivity =  PlayerPrefs.GetFloat("Sensivity", DefaultSensivity);
+        SensivityUpdate(Sensivity);
+    }
+
+
+    public void SensivityUpdate(float Sensivity)
+    {
         cameraRotation.SettingsSet(Sensivity);
         playerMovement.SettingsSet(Sensivity);
     }
-
 }
     
