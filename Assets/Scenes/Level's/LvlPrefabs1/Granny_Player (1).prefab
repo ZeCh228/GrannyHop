@@ -1601,7 +1601,8 @@ AudioSource:
   m_GameObject: {fileID: 5773532860881749537}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c7ca6f7660dd1834992de05feb6841ec,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1704,8 +1705,8 @@ MonoBehaviour:
   _maxXRotation: 90
   _accelerationReducer: 0.515
   rb: {fileID: 8154305906516855158}
-  VerticalSensivity: 100
-  HorizontalSensivity: 200
+  BaseVerticalSensivity: 100
+  BaseHorizontalSensivity: 200
 --- !u!1 &5815551768595597675
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
+using MoreMountains.Tools;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -56,7 +58,16 @@ public class PlayerMovement : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(currentPitch, y, 0);
         transform.rotation = rotation;
-    }   
+    }
+
+
+    public void FreeView()
+    {
+        if(Input.GetKeyDown(KeyCode.Space)) 
+        {
+            Rotate(Vector2.zero);
+        }
+    }
 }
 
 

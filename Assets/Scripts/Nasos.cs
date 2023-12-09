@@ -32,7 +32,7 @@ public class Nasos : MonoBehaviour
                 }
                 else
                 {
-                    AudioSystem.PlayDefAudio(colliders[0].name);
+                    AudioSystem?.PlayDefAudio(colliders[0].name);
                 }
                 PlayerMovement.Jump(JumpPower);
 
@@ -52,11 +52,7 @@ public class Nasos : MonoBehaviour
         IsJumpAllowed = false;
         yield return new WaitForSeconds(JumpReload);
         IsJumpAllowed = true;
-    }
-
-    
-    
-    
+    }    
 }
 
 

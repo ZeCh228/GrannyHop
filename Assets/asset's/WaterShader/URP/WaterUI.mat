@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CopyShaderWater
+  m_Name: WaterUI
   m_Shader: {fileID: 4800000, guid: 00a414d74c7f5df47b35668bbc5a4002, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -46,36 +46,36 @@ Material:
     - _GradientPosition1: 1.1693549
     - _GradientPosition2: 2.3790324
     - _GradientPosition3: 0.93
-    - _LightColorIntensity: 0.68
-    - _MainFoamIntensity: 3.44
-    - _MainFoamOpacity: 0.95
-    - _MainFoamScale: 3.5
-    - _MainFoamSpeed: 0.1
+    - _LightColorIntensity: 1
+    - _MainFoamIntensity: 3.8
+    - _MainFoamOpacity: 0.234
+    - _MainFoamScale: 20.89
+    - _MainFoamSpeed: 1.52
     - _Opacity: 0.263
     - _OpacityDepth: 2
     - _RealTimeReflection: 0
     - _ReflectionsIntensity: 1
     - _RefractionIntensity: 2.11
-    - _Roughness: 2.41
+    - _Roughness: 1
     - _Roughness1: 0.79
     - _SecondaryFoamAlwaysVisible: 0
     - _SecondaryFoamIntensity: 1.12
-    - _SecondaryFoamOpacity: 6.44
-    - _SecondaryFoamScale: 3.5
+    - _SecondaryFoamOpacity: 0.234
+    - _SecondaryFoamScale: 1
     - _SpecularIntensity: 0
     - _TurbulenceDistortionIntesity: 0.47
-    - _TurbulenceScale: 0.44
+    - _TurbulenceScale: 0.98
     - _VertexOffset: 1
-    - _WaveDistortionIntensity: 0.06
-    - _WavesAmplitude: 1.4
-    - _WavesDirection: 360
-    - _WavesIntensity: 0.25
-    - _WavesSpeed: 2
+    - _WaveDistortionIntensity: 64.37
+    - _WavesAmplitude: 0.2
+    - _WavesDirection: 171
+    - _WavesIntensity: 0.43
+    - _WavesSpeed: 0.76
     m_Colors:
     - _Color0: {r: 0.55294114, g: 0.7597304, b: 1, a: 1}
-    - _DepthGradient1: {r: 0.43908033, g: 0.8427246, b: 1, a: 1}
+    - _DepthGradient1: {r: 0.43831235, g: 0.8427246, b: 1, a: 1}
     - _DepthGradient2: {r: 0, g: 0.54574716, b: 0.764151, a: 1}
-    - _DepthGradient3: {r: 0.06393195, g: 0.1332534, b: 0.3016897, a: 1}
+    - _DepthGradient3: {r: 0.06335598, g: 0.13252547, b: 0.30092174, a: 1}
     - _DepthGradient4: {r: 0.10164861, g: 0.10137052, b: 0.32075462, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}

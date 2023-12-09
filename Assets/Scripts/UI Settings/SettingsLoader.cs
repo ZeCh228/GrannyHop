@@ -8,9 +8,12 @@ public class SettingsLoader : MonoBehaviour
     public float MaxSensivity;
     public float DefaultSensivity;
     public float DefaultVolume;
+    public float MaxVolume;
+
     [SerializeField] CameraRotation cameraRotation;
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] AudioMixer MixerSFX;
+    
 
 
     
@@ -24,7 +27,8 @@ public class SettingsLoader : MonoBehaviour
 
     public void VolumeUpdate(float Volume) 
     {
-        //MixerSFX.SetFloat(Volume);
+        
+        MixerSFX.SetFloat("Volume", Volume);
     }
 
 
