@@ -21,7 +21,12 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        Spawn();
+        Spawn();       
+    } 
+    
+    private void Update()
+    {       
+        FreeView();
     }
 
 
@@ -69,7 +74,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-
+    public void FreeView()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Movement.ResetRotation(SpawnPoint.eulerAngles.y);
+            LookAt.ResetRotation(SpawnPoint.eulerAngles.y);
+            Debug.Log("GetKeyDown");
+        }
+    }
 
     private void Spawn()
     {

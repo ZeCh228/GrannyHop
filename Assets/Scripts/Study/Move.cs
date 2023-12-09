@@ -14,11 +14,11 @@ public class Move : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    
-    void Update()
-    {
-        MoveVector.x = Input.GetAxis("Horizontal"); 
-        MoveVector.y = Input.GetAxis("Vertical"); 
-        rb.MovePosition(rb.position + MoveVector * MoveSpeed * Time.deltaTime);
-    }
+
+     void Update()
+     {
+         MoveVector.x = Input.GetAxis("Horizontal"); 
+         MoveVector.y = Input.GetAxis("Vertical"); 
+         rb.MovePosition(rb.position + MoveVector * MoveSpeed * Time.deltaTime);
+     }
 }

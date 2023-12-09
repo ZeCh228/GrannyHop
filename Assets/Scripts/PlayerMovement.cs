@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private float CurrentHorizontalSensivity;
     private float CurrentVerticalSensivity;
 
+
     public void SettingsSet(float Sensivity)
     {
         TotalSensivity = Sensivity;
@@ -60,14 +61,10 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = rotation;
     }
 
+    
 
-    public void FreeView()
-    {
-        if(Input.GetKeyDown(KeyCode.Space)) 
-        {
-            Rotate(Vector2.zero);
-        }
-    }
+
+    
 }
 
 
