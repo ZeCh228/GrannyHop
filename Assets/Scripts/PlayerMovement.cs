@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private float TotalSensivity;
     private float CurrentHorizontalSensivity;
     private float CurrentVerticalSensivity;
+    private bool isAllowToRotateX = true;
 
 
     public void SettingsSet(float Sensivity)
@@ -35,10 +36,24 @@ public class PlayerMovement : MonoBehaviour
     public void ResetRotation(float y)
     {
         currentPitch = 0;
-        transform.rotation = Quaternion.Euler(0,y,0);
+        transform.rotation = Quaternion.Euler(0, y, 0);
+    }
+  
+    
+    public void BlockRotationForFreeView()
+    {
+        isAllowToRotateX = false;
+        currentPitch = 0;
+        transform.rotation = Quaternion.Euler(0,transform.eulerAngles.y,0);
+    }
+  
+
+    public void UnBlockRotationForFreeView() 
+    {
+        isAllowToRotateX = true;
     }
 
-   
+
     public void Jump(float Power)
     {
         //rb.velocity = new Vector3(0, 0, 0);
@@ -46,25 +61,25 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x * _accelerationReducer, 0, rb.velocity.z * _accelerationReducer);
         
         rb.AddForce(transform.up * Power, ForceMode.VelocityChange);
-        DebugDirections.Instance.EndDirections.Add(transform.up * 2);
+        //DebugDirections.Instance.EndDirections.Add(transform.up * 2);
     }
-
-   
+  
+    
     public void Rotate(Vector2 direction)
     {
+
         float y = transform.eulerAngles.y + direction.y * (CurrentHorizontalSensivity * Time.deltaTime);
-        float rotationInputX = direction.x * CurrentVerticalSensivity * Time.deltaTime;
-        currentPitch -= rotationInputX;
-        currentPitch = Mathf.Clamp(currentPitch, _minXRotation, _maxXRotation);
+
+        if (isAllowToRotateX == true) 
+        {            
+            float rotationInputX = direction.x * CurrentVerticalSensivity * Time.deltaTime;
+            currentPitch -= rotationInputX;
+            currentPitch = Mathf.Clamp(currentPitch, _minXRotation, _maxXRotation);            
+        }
 
         Quaternion rotation = Quaternion.Euler(currentPitch, y, 0);
         transform.rotation = rotation;
-    }
-
-    
-
-
-    
+    }    
 }
 
 

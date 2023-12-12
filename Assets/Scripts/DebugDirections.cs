@@ -22,11 +22,11 @@ public class DebugDirections : MonoBehaviour
         
     }
 
-    void Update()
+   /* void Update()
     {
         for (int i = 0; i < StartDirections.Count; i++) 
         {
             Debug.DrawRay(StartDirections[i], EndDirections[i], Color.red);
         }
-    }
+    }*/
 }

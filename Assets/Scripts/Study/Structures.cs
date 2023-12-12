@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
-using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Structures : MonoBehaviour
 {
@@ -13,18 +11,30 @@ public class Structures : MonoBehaviour
     [SerializeField] string password;
     [SerializeField] string userInput;
     [SerializeField] List<GameObject> cubes;
-
-
+    [SerializeField] Dictionary<int, string> StudyDictionary;
+    [SerializeField] string StavkaName;
 
 
 
     private void Awake()
     {
-        cubes = new List<GameObject>(10); //начать отсюда 
+        StudyDictionary = new Dictionary<int, string>();    
+        StudyDictionary.Add(1, "black1");
+        StudyDictionary.Add(2, "black2");
+        StudyDictionary.Add(3, "black3");
+        StudyDictionary.Add(4, "red1");
+        StudyDictionary.Add(5, "red2");
+        StudyDictionary.Add(6, "red3");
+        StudyDictionary.ContainsKey(4);
+
+
     }
 
 
-
+    private void OnValidate()
+    {
+        Debug.Log(StudyDictionary[Random.Range(1, 7)] == StavkaName);
+    }
 
 
 

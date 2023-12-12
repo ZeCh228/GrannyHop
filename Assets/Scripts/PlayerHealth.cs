@@ -24,11 +24,6 @@ public class PlayerHealth : MonoBehaviour
         Spawn();       
     } 
     
-    private void Update()
-    {       
-        FreeView();
-    }
-
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -74,22 +69,17 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void FreeView()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Movement.ResetRotation(SpawnPoint.eulerAngles.y);
-            LookAt.ResetRotation(SpawnPoint.eulerAngles.y);
-            Debug.Log("GetKeyDown");
-        }
-    }
 
-    private void Spawn()
-    {
+   private void Spawn()
+   {
         transform.position = SpawnPoint.position;
         Movement.ResetRotation(SpawnPoint.eulerAngles.y);
         LookAt.ResetRotation(SpawnPoint.eulerAngles.y);
 
         rb.velocity = Vector3.zero;
-    }
+   }
+
+
+   
 }
+

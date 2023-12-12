@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using MoreMountains.Tools;
+using System.Linq;
+using UnityEngine;
 
 public class PCInput : MonoBehaviour
 {
@@ -32,6 +34,21 @@ public class PCInput : MonoBehaviour
         Debug.Log(direction);
         PlayerMovement.Rotate(direction); 
         cameraRotation.Rotate(direction);
+
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PlayerMovement.BlockRotationForFreeView();
+            
+            Debug.Log("GetKeyDown");
+        }
+        
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            PlayerMovement.UnBlockRotationForFreeView();
+            
+            Debug.Log("GetKeyUp");
+        }
     }
 }
 
