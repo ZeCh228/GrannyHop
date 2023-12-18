@@ -14,12 +14,11 @@ public class SettingsLoader : MonoBehaviour
     [SerializeField] public float minVolume = -80f;
     [SerializeField] public float maxVolume = 0f;
 
-    [SerializeField] CameraRotation cameraRotation;
-    [SerializeField] PlayerMovement playerMovement;
-    [SerializeField] AudioMixer Mixer;
+    [SerializeField] CameraRotation CameraRotation;
+    [SerializeField] PlayerMovement PlayerMovement;
+    [SerializeField] AudioMixer Mixer;   
    
-    
-    
+     
 
     
     private void Start()
@@ -32,6 +31,7 @@ public class SettingsLoader : MonoBehaviour
        // VolumeUpdate(Volume);
         MusicUpdate(Music);
         SFXUpdate(SFX);
+        UpdateInvert(PlayerPrefs.GetInt("Invert", 1) == -1 ? false : true);
     }
 
 
@@ -41,6 +41,21 @@ public class SettingsLoader : MonoBehaviour
         Mixer.SetFloat("Master", ConvertValue(Volume));
 
     }*/
+
+
+    public void UpdateInvert(bool Invert) 
+    {
+        if(Invert == true) 
+        {
+            PlayerMovement.Invertion = -1;
+            CameraRotation.Invertion = -1;
+        }
+        else 
+        {
+            PlayerMovement.Invertion = 1;
+            CameraRotation.Invertion = 1;
+        }
+    }
 
 
     public void MusicUpdate(float Music)
@@ -62,8 +77,8 @@ public class SettingsLoader : MonoBehaviour
     public void SensivityUpdate(float Sensivity)
     {
 
-        cameraRotation.SettingsSet(Sensivity);
-        playerMovement.SettingsSet(Sensivity);
+        CameraRotation.SettingsSet(Sensivity);
+        PlayerMovement.SettingsSet(Sensivity);
 
     }
     

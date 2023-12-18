@@ -36,10 +36,10 @@ public class Nasos : MonoBehaviour
                 }
                 PlayerMovement.Jump(JumpPower);
 
-                if (Physics.Raycast(transform.position,Vector3.down,out RaycastHit info, 20, groundLayer))
+                /*if (Physics.Raycast(transform.position,Vector3.down,out RaycastHit info, 20, groundLayer))
                 {
                     DebugDirections.Instance.StartDirections.Add(info.point);                    
-                }
+                }*/
 
                 
                 StartCoroutine(JumpCoolDown());

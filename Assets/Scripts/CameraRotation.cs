@@ -9,6 +9,8 @@ public class CameraRotation : MonoBehaviour
     [SerializeField] float BaseHorizontalSensivity;
     [SerializeField] Transform target;
 
+    public int Invertion;
+
     private float TotalSensivity;
     private float currentPitch;
     private float CurrentHorizontalSensivity;
@@ -36,7 +38,7 @@ public class CameraRotation : MonoBehaviour
         float y = transform.eulerAngles.y + direction.y * (CurrentHorizontalSensivity * Time.deltaTime);
 
 
-        float rotationInputX = direction.x * CurrentVerticalSensivity * Time.deltaTime;
+        float rotationInputX = (direction.x * CurrentVerticalSensivity * Time.deltaTime) * Invertion;
         currentPitch -= rotationInputX;
         currentPitch = Mathf.Clamp(currentPitch, _minXRotation, _maxXRotation);
 

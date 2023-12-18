@@ -7,17 +7,6 @@ using static UnityEditor.Progress;
 public class AudioSystem : MonoBehaviour
 {
     [SerializeField] AudioSource Audio;
-    /*[SerializeField]AudioClip WoodFloor1;
-    [SerializeField] private AudioClip WoodFloor2;
-    [SerializeField] private AudioClip WoodFloor3;
-    [SerializeField] AudioClip IronFloor1;
-    [SerializeField] private AudioClip IronFloor2;
-    [SerializeField] private AudioClip IronFloor3;
-    [SerializeField] AudioClip GrassFloor1;
-    [SerializeField] private AudioClip GrassFloor2;
-    [SerializeField] private AudioClip GrassFloor3;*/
-
-
     [SerializeField] AudioClip[] WoodFloor;
     [SerializeField] AudioClip[] IronFloor;
     [SerializeField] AudioClip[] GrassFloor;
@@ -61,7 +50,7 @@ public class AudioSystem : MonoBehaviour
 
     public void PlayDefAudio(string name)
     {
-        Audio.PlayOneShot(WoodFloor[1]);
+        Audio.PlayOneShot(WoodFloor[0]);
         Debug.LogError($"GameObject {name} NET MATERIALA IDIOT");
     }
 

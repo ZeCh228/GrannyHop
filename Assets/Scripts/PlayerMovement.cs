@@ -17,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public float BaseVerticalSensivity;
     public float BaseHorizontalSensivity;
-   
+    public int Invertion;
+
     private float currentPitch;
     private float TotalSensivity;
     private float CurrentHorizontalSensivity;
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isAllowToRotateX == true) 
         {            
-            float rotationInputX = direction.x * CurrentVerticalSensivity * Time.deltaTime;
+            float rotationInputX = (direction.x * CurrentVerticalSensivity * Time.deltaTime) * Invertion;
             currentPitch -= rotationInputX;
             currentPitch = Mathf.Clamp(currentPitch, _minXRotation, _maxXRotation);            
         }
