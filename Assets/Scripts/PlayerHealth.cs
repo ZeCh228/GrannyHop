@@ -1,3 +1,4 @@
+using MoreMountains.Feedbacks;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int DeadCountUiStart;
     [SerializeField] Animation AnimationDeadUI;
     [SerializeField] AudioSystem AudioSystem;
+    [SerializeField] MMF_Player SpawnFeedBacks_;
 
 
     private void Start()
@@ -68,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
             AnimationDeadUI.Play("New Animation");
         }
     }
-
+ 
 
    private void Spawn()
    {
@@ -77,6 +79,8 @@ public class PlayerHealth : MonoBehaviour
         LookAt.ResetRotation(SpawnPoint.eulerAngles.y);
 
         rb.velocity = Vector3.zero;
+
+        SpawnFeedBacks_.PlayFeedbacks();
    }
 
 
