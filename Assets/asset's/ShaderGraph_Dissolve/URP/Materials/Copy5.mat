@@ -7,8 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Dissolve_Dissolve_Direction_Metallic_DoubleSide_WorldSpaceOffest
-    1
+  m_Name: Copy5
   m_Shader: {fileID: -6465566751694194690, guid: 479a3a5ebe2be224c9db1e0fd92977df,
     type: 3}
   m_Parent: {fileID: 0}
@@ -29,7 +28,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: da7f5699285d4b24e96f1bb7604c4985, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -63,19 +62,19 @@ Material:
     - _Dissolve: 0.41
     - _EdgeColorIntensity: 1
     - _EdgeWidth: 0.265
-    - _Metallic: 0
+    - _Metallic: 0.662
     - _NoiseScale: 115.59
     - _NormalScale: 1
     - _OcclusionStrength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.871
+    - _Smoothness: 0.622
     m_Colors:
-    - _BaseColor: {r: 0.1745283, g: 1, b: 0.8819078, a: 1}
+    - _BaseColor: {r: 0.9528302, g: 0.5633237, b: 0.28315237, a: 1}
     - _DirectionFactor: {r: 0, g: 0.1, b: 0, a: 0}
-    - _DissolveDirection: {r: 0, g: 0.1, b: 0, a: 0}
-    - _DissolveOffest: {r: 0, g: 0, b: 0, a: 0}
-    - _EdgeColor: {r: 4.7420034, g: 0, b: 11.181761, a: 1}
+    - _DissolveDirection: {r: 0, g: 0, b: 0.1, a: 0}
+    - _DissolveOffest: {r: 0, g: 0, b: -0.1, a: 0}
+    - _EdgeColor: {r: 0, g: 11.181761, b: 0.23417301, a: 1}
     - _NoiseUVSpeed: {r: 1, g: 1, b: 0, a: 0}
     - _Offest: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
