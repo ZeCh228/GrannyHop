@@ -3,7 +3,47 @@ guid: 624d2b4315528ac4cb000c792e53ec40
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_body_1
+    second: {fileID: 2100000, guid: ca5d8df5cc27f4b44b105365b5774a8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_body_2
+    second: {fileID: 2100000, guid: 3d8e1664b110a194d89896babb940fc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_body_3
+    second: {fileID: 2100000, guid: 36641666aeb19054f808e0b6c83e4de0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_handle_10
+    second: {fileID: 2100000, guid: 980acb623381c51469ff42210a531c07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_handle_16
+    second: {fileID: 2100000, guid: 9ce09438b456ada4591abeb13c46c105, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_handle_6
+    second: {fileID: 2100000, guid: d618b2907fb51fd4fb7bc40b509c45fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_handle_7
+    second: {fileID: 2100000, guid: b497702d4b6f70b4fb42b0b5d8995c4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pogo_stick_spring
+    second: {fileID: 2100000, guid: 04ac0eca5bf4d864ab669406f7d75d51, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

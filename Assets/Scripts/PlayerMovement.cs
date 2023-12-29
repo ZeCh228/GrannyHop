@@ -57,12 +57,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(float Power)
     {
-        //rb.velocity = new Vector3(0, 0, 0);
-        // rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.velocity = new Vector3(rb.velocity.x * _accelerationReducer, 0, rb.velocity.z * _accelerationReducer);
         
         rb.AddForce(transform.up * Power, ForceMode.VelocityChange);
-        //DebugDirections.Instance.EndDirections.Add(transform.up * 2);
     }
   
     

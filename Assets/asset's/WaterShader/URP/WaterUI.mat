@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _SECONDARYFOAMALWAYSVISIBLE_ON
   - _VERTEXOFFSET_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -74,9 +73,9 @@ Material:
     - _WavesSpeed: 0.5
     m_Colors:
     - _Color0: {r: 0.55294114, g: 0.7597304, b: 1, a: 1}
-    - _DepthGradient1: {r: 0.43775818, g: 0.8427246, b: 1, a: 1}
+    - _DepthGradient1: {r: 0.43775472, g: 0.8427246, b: 1, a: 1}
     - _DepthGradient2: {r: 0, g: 0.54574716, b: 0.764151, a: 1}
-    - _DepthGradient3: {r: 0.06294034, g: 0.13200018, b: 0.30036756, a: 1}
+    - _DepthGradient3: {r: 0.062937744, g: 0.1319969, b: 0.3003641, a: 1}
     - _DepthGradient4: {r: 0.10164861, g: 0.10137052, b: 0.32075462, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}

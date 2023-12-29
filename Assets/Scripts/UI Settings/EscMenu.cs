@@ -2,19 +2,28 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EscMenu : MonoBehaviour 
+public class EscMenu : MonoBehaviour
 {
-
-    [SerializeField] GameObject Menu;    
-
+    [SerializeField] GameObject Menu;
+    [SerializeField] GameObject SettingsMenu;
+    [SerializeField] GameObject VictoryMenu;
+    [SerializeField] PlayerHealth PlayerHealth;
+    
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!Menu.activeSelf) 
-            { 
-                Menu.SetActive(true);                
+            if (PlayerHealth.InProcessRespawn == true) return;
+            if (VictoryMenu.activeSelf) return;
+            if (SettingsMenu.activeSelf)
+            {
+                SettingsMenu.SetActive(false);
+                Menu.SetActive(true);
+            }
+            else if (!Menu.activeSelf)
+            {
+                Menu.SetActive(true);
                 Time.timeScale = 0f;
                 Cursor.visible = true;
             }
@@ -26,14 +35,15 @@ public class EscMenu : MonoBehaviour
     }
 
 
-    public void Continue() 
+    public void Continue()
     {
         Menu.SetActive(false);
         Time.timeScale = 1f;
         Cursor.visible = false;
     }
 
-    public void MainMenu() 
+
+    public void MainMenu()
     {
         SceneManager.LoadScene(0);
     }

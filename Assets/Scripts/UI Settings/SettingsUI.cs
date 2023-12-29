@@ -15,8 +15,6 @@ public class SettingsUI : MonoBehaviour
     [SerializeField] TMP_InputField InputFieldSFX;
     [SerializeField] SettingsLoader SettingsLoader;
     [SerializeField] Toggle ToggleInvert;
-    //[SerializeField] Slider MasterVolume;
-    //[SerializeField] TMP_InputField InputFieldMasterVolume;
 
 
     public void Invert(bool InvertValue) 
@@ -31,15 +29,6 @@ public class SettingsUI : MonoBehaviour
     {
         SensivityInputField.text = (Math.Round(SliderSensivity.value, 2).ToString());
     }
-
-
-
-    /* public void UpdateInputFieldMasterVolume(float Volume)
-     {
-        // InputFieldMasterVolume.text = (Mathf.RoundToInt(Volume).ToString());
-       //  settingsLoader.VolumeUpdate(Volume);
-     }*/
-
 
 
     public void UpdateInputFieldVolumeMusic(float Music)
@@ -63,17 +52,6 @@ public class SettingsUI : MonoBehaviour
         float.TryParse(value, out float result);
         SliderSensivity.value = Mathf.Clamp(result, 0, SettingsLoader.MaxSensivity);
     }
-
-
-
-    /* public void UpdateScrollBarByInputFieldMasterVolume(string value)
-     {
-         float.TryParse(value, out float result);
-         Mathf.Clamp(result, 0, settingsLoader.ConvertMixerMaxToSliderMax);
-
-         settingsLoader.VolumeUpdate(result);
-     }*/
-
 
 
     public void UpdateScrollBarByInputFieldMusic(string value)
@@ -101,7 +79,6 @@ public class SettingsUI : MonoBehaviour
     public void SaveSettings()
     {
         PlayerPrefs.SetFloat("Sensivity", SliderSensivity.value);
-        //PlayerPrefs.SetFloat("Volume", MasterVolume.value);
         PlayerPrefs.SetFloat("Music", VolumeMusic.value);
         PlayerPrefs.SetFloat("SFX", SFXVolume.value);
         SettingsLoader.SensivityUpdate(SliderSensivity.value);
@@ -112,11 +89,9 @@ public class SettingsUI : MonoBehaviour
     public void LoadSettingsToUpdateUI()
     {
         float Sensivity = PlayerPrefs.GetFloat("Sensivity", SettingsLoader.DefaultSensivity);
-        // float Volume = PlayerPrefs.GetFloat("Volume", settingsLoader.DefaultVolume);
         float Music = PlayerPrefs.GetFloat("Music", SettingsLoader.DefaultVolume);
         float SFX = PlayerPrefs.GetFloat("SFX", SettingsLoader.DefaultVolume);
         UpdateSensivityUI(Sensivity);
-        //UpdateMasterVolumeInUI(Volume);
         UpdateMusicInUI(Music);
         UpdateSFXInUI(SFX);
         InvertUpdate();
@@ -137,15 +112,6 @@ public class SettingsUI : MonoBehaviour
         SliderSensivity.value = Sensivity;
         SensivityInputField.text = (Math.Round(Sensivity, 2).ToString());
     }
-
-
-
-    /* private void UpdateMasterVolumeInUI(float Volume)
-     {
-         MasterVolume.value = Volume;
-         InputFieldMasterVolume.text = (Mathf.RoundToInt(Volume).ToString());       
-     } */
-
     
 
     private void UpdateMusicInUI(float Music)
@@ -167,9 +133,6 @@ public class SettingsUI : MonoBehaviour
     {
         PlayerPrefs.SetFloat("Sensivity", SettingsLoader.DefaultSensivity);
         UpdateSensivityUI(PlayerPrefs.GetFloat("Sensivity", SettingsLoader.DefaultSensivity));
-
-        /* PlayerPrefs.SetFloat("Volume", settingsLoader.DefaultVolume);
-         UpdateMasterVolumeInUI(PlayerPrefs.GetFloat("Volume", settingsLoader.DefaultVolume));*/
 
         PlayerPrefs.SetFloat("Music", SettingsLoader.DefaultVolume);
         UpdateMusicInUI(PlayerPrefs.GetFloat("Music", SettingsLoader.DefaultVolume));

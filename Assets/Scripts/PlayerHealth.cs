@@ -1,10 +1,7 @@
 using MoreMountains.Feedbacks;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -19,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Animation AnimationDeadUI;
     [SerializeField] AudioSystem AudioSystem;
     [SerializeField] MMF_Player SpawnFeedBacks_;
+    public bool InProcessRespawn;
 
 
     private void Start()
@@ -47,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void DeadRespawn() 
     {
+        InProcessRespawn = true;
         PlayerDead += 1;
         DeadAnimationCount();
         DeadUI.SetText(PlayerDead.ToString());
@@ -74,6 +73,7 @@ public class PlayerHealth : MonoBehaviour
 
    private void Spawn()
    {
+        InProcessRespawn = false;
         transform.position = SpawnPoint.position;
         Movement.ResetRotation(SpawnPoint.eulerAngles.y);
         LookAt.ResetRotation(SpawnPoint.eulerAngles.y);

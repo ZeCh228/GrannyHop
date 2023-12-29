@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L UpperArm
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,7 +44,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip Pelvis
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 781997596571778000}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.4999993, w: 0.5000007}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0, z: 0.006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78,7 +78,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip Spine
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -110,7 +110,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip Spine1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -144,7 +144,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Calf
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -259,7 +259,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Forearm
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -374,7 +374,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -406,7 +406,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Forearm
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -438,7 +438,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Hand
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -458,7 +458,7 @@ Transform:
   - {fileID: 2738834090904108544}
   - {fileID: 534865613026180863}
   m_Father: {fileID: 8824129468877891746}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 82.286, y: 88.919, z: 82.455}
 --- !u!1 &3179274824867153738
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +471,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Thigh
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -490,7 +490,7 @@ Transform:
   m_Children:
   - {fileID: 1094936427098788370}
   m_Father: {fileID: 2647746106060817545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.046, y: -177.241, z: -18.39}
 --- !u!1 &3394160146136232323
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Finger01
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -617,7 +617,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Clavicle
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -649,7 +649,7 @@ GameObject:
   m_Layer: 0
   m_Name: rig_CharRoot
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -681,7 +681,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Finger11
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -700,7 +700,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 534865613026180863}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -134.632}
 --- !u!1 &4003555376316580252
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +713,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Thigh
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -732,7 +732,7 @@ Transform:
   m_Children:
   - {fileID: 8667988615733315181}
   m_Father: {fileID: 2647746106060817545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -9.082, y: 177.362, z: -19.157}
 --- !u!1 &4349018520402188530
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Finger11
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -892,7 +892,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip Neck
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -924,7 +924,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Foot
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -943,7 +943,7 @@ Transform:
   m_Children:
   - {fileID: 3796143406775129874}
   m_Father: {fileID: 8667988615733315181}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.947, y: 3.239, z: -8.814}
 --- !u!1 &4652062184687365952
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +956,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Finger01
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1270,7 +1270,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Calf
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1302,7 +1302,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Foot
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1321,7 +1321,7 @@ Transform:
   m_Children:
   - {fileID: 1085298401613127894}
   m_Father: {fileID: 1094936427098788370}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -4.938, y: -3.18, z: -8.02}
 --- !u!1 &5553310793481694399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Clavicle
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1493,7 +1493,7 @@ Animator:
   m_GameObject: {fileID: 5773532860881749537}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e9603e7a3938b4e47abbb7121bcbae61, type: 3}
-  m_Controller: {fileID: 9100000, guid: afe9de63454bbd448a9886ad5a285ae7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8a2b61b3b06e74e46bc1e667f9a2079a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1576,6 +1576,8 @@ MonoBehaviour:
   DeadCountUiStart: 2
   AnimationDeadUI: {fileID: 0}
   AudioSystem: {fileID: 0}
+  SpawnFeedBacks_: {fileID: 0}
+  InProcessRespawn: 0
 --- !u!114 &5642014195543189467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1709,7 @@ MonoBehaviour:
   rb: {fileID: 8154305906516855158}
   BaseVerticalSensivity: 100
   BaseHorizontalSensivity: 200
+  Invertion: 0
 --- !u!1 &5815551768595597675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1722,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R UpperArm
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1731,14 +1734,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5815551768595597675}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.27101707, y: -0.0039767423, z: 0.5695132, w: 0.77600807}
+  m_LocalRotation: {x: -0.2710171, y: -0.0039767427, z: 0.56951326, w: 0.7760081}
   m_LocalPosition: {x: -0.159, y: 0.24, z: -0.032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8824129468877891746}
   m_Father: {fileID: 3331945811109400745}
-  m_LocalEulerAnglesHint: {x: -24.588, y: -20.259, z: 77.009}
+  m_LocalEulerAnglesHint: {x: -25.762, y: -19.874, z: 76.809}
 --- !u!1 &6070773281105768213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1754,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Toe0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1770,7 +1773,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6825473566228030358}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.001, y: -0.111, z: -98.821}
 --- !u!1 &6073182624924347327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1786,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Finger1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1815,7 +1818,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Finger0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1834,7 +1837,7 @@ Transform:
   m_Children:
   - {fileID: 1181753724057889692}
   m_Father: {fileID: 7349233026237827164}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -43.749, y: 183.621, z: -162.557}
 --- !u!1 &6598996131314306197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,7 +1850,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip Head
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2075,7 +2078,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Hand
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2108,7 +2111,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Toe0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2180,7 +2183,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip L Finger0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2477,6 +2480,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  MMF_Player: {fileID: 0}
+  EffectTransform: {fileID: 0}
 --- !u!96 &115471136007704895
 TrailRenderer:
   serializedVersion: 3
@@ -2611,7 +2616,7 @@ GameObject:
   m_Layer: 0
   m_Name: bip R Finger1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

@@ -73,9 +73,9 @@ Material:
     - _WavesSpeed: 2
     m_Colors:
     - _Color0: {r: 0.55294114, g: 0.7597304, b: 1, a: 1}
-    - _DepthGradient1: {r: 0.43880376, g: 0.8427246, b: 1, a: 1}
+    - _DepthGradient1: {r: 0.43878374, g: 0.8427246, b: 1, a: 1}
     - _DepthGradient2: {r: 0, g: 0.54574716, b: 0.764151, a: 1}
-    - _DepthGradient3: {r: 0.06372453, g: 0.13299125, b: 0.30141315, a: 1}
+    - _DepthGradient3: {r: 0.063709505, g: 0.13297227, b: 0.30139312, a: 1}
     - _DepthGradient4: {r: 0.10164861, g: 0.10137052, b: 0.32075462, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}

@@ -11,12 +11,12 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 479a3a5ebe2be224c9db1e0fd92977df,
     type: 3}
   m_Parent: {fileID: 2100000, guid: d878e3398a83f6644af257f59408208c, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 4
   m_ValidKeywords:
   - BOOLEAN_USE_WROLDSPACE_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -38,7 +38,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveDirection: {r: 0, g: 0, b: 0.1, a: 0}
-    - _DissolveOffest: {r: 0, g: 0, b: -1, a: 0}
+    - _DissolveOffest: {r: 0, g: 0, b: -0.5, a: 0}
     - _EdgeColor: {r: 0, g: 2.0236006, b: 0.03430126, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1008889297691251088

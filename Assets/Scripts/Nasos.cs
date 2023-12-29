@@ -1,14 +1,9 @@
-using Cinemachine.Utility;
 using MoreMountains.Feedbacks;
 using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
-using UnityEngine.ProBuilder;
-using static UnityEditor.PlayerSettings;
 
 public class Nasos : MonoBehaviour
-{   
+{
     public float JumpPower;
     public PlayerMovement PlayerMovement;
     [SerializeField] Transform spherePoint;
@@ -26,7 +21,7 @@ public class Nasos : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (IsJumpAllowed) 
+        if (IsJumpAllowed)
         {
             var colliders = Physics.OverlapSphere(spherePoint.position, sphereRadius, groundMask);
 
@@ -50,28 +45,22 @@ public class Nasos : MonoBehaviour
                     EffectTransform.position = Position;
 
 
-                    EffectTransform.rotation = Quaternion.LookRotation(Rotation,Vector3.forward);
+                    EffectTransform.rotation = Quaternion.LookRotation(Rotation, Vector3.forward);
 
-                    MMF_Player.PlayFeedbacks();                    
+                    MMF_Player.PlayFeedbacks();
                 }
-                
+
                 StartCoroutine(JumpCoolDown());
             }
-        }        
+        }
     }
 
 
-    private IEnumerator JumpCoolDown() 
+    private IEnumerator JumpCoolDown()
     {
         IsJumpAllowed = false;
         yield return new WaitForSeconds(JumpReload);
         IsJumpAllowed = true;
-    }
-
-
-    private void Update()
-    {
-        Debug.DrawRay(spherePoint.position, spherePoint.TransformDirection(Vector3.down) * 20, Color.red);
     }
 }
 
