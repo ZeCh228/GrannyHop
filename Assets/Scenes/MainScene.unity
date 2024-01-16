@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -468,9 +468,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minXRotation: 0
   _maxXRotation: 0
+  _accelerationReducer: 0
   rb: {fileID: 112067303}
-  VerticalSensivity: 150
-  HorizontalSensivity: 200
+  BaseVerticalSensivity: 0
+  BaseHorizontalSensivity: 0
+  Invertion: 0
 --- !u!54 &112067303
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -533,8 +535,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7c55e622033ab42b4aaedce02a8645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoroutinePause: 0.5
   SpawnPoint: {fileID: 682756881}
+  LookAt: {fileID: 0}
+  Movement: {fileID: 0}
   rb: {fileID: 112067303}
+  PlayerDead: 0
+  DeadUI: {fileID: 0}
+  DeadCountUiStart: 0
+  AnimationDeadUI: {fileID: 0}
+  AudioSystem: {fileID: 0}
+  SpawnFeedBacks_: {fileID: 0}
+  InProcessRespawn: 0
 --- !u!1 &265732860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,12 +2073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaaf9bbe86065540adb65840e9050c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 112067303}
-  Rotate: {fileID: 112067302}
-  PCInput: {fileID: 1404070739}
-  MobileInput: {fileID: 1404070737}
-  canvas: {fileID: 937359924}
-  TimeStars: {fileID: 2064121209}
+  MMF_Player: {fileID: 0}
 --- !u!1 &792990965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3025112101129423646, guid: 624d2b4315528ac4cb000c792e53ec40,
@@ -2092,6 +2099,13 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  AudioSystem: {fileID: 0}
+  JumpReload: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  MMF_Player: {fileID: 0}
+  EffectTransform: {fileID: 0}
 --- !u!96 &792990977
 TrailRenderer:
   serializedVersion: 3
@@ -2381,6 +2395,13 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  AudioSystem: {fileID: 0}
+  JumpReload: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  MMF_Player: {fileID: 0}
+  EffectTransform: {fileID: 0}
 --- !u!135 &900560591
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2422,7 +2443,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2795,7 +2816,7 @@ MonoBehaviour:
   - {fileID: 265732860}
   - {fileID: 89608211}
   - {fileID: 314924177}
-  Time: {fileID: 1985726582}
+  TimeText: {fileID: 0}
   Canvas: {fileID: 311144401}
 --- !u!4 &937359925
 Transform:
@@ -3995,7 +4016,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4058,9 +4079,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minXRotation: 0
   _maxXRotation: 0
+  _accelerationReducer: 0
   rb: {fileID: 1216331793}
-  VerticalSensivity: 150
-  HorizontalSensivity: 200
+  BaseVerticalSensivity: 0
+  BaseHorizontalSensivity: 0
+  Invertion: 0
 --- !u!114 &1216331799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4073,8 +4096,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7c55e622033ab42b4aaedce02a8645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoroutinePause: 0.5
   SpawnPoint: {fileID: 682756881}
+  LookAt: {fileID: 0}
+  Movement: {fileID: 0}
   rb: {fileID: 1216331793}
+  PlayerDead: 0
+  DeadUI: {fileID: 0}
+  DeadCountUiStart: 0
+  AnimationDeadUI: {fileID: 0}
+  AudioSystem: {fileID: 0}
+  SpawnFeedBacks_: {fileID: 0}
+  InProcessRespawn: 0
 --- !u!1 &1247277232
 GameObject:
   m_ObjectHideFlags: 0
@@ -4447,7 +4480,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4625,30 +4659,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1404070737 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3942185181029339142, guid: 5e74f02aabd7b7e42ada7b466cdba697,
-    type: 3}
-  m_PrefabInstance: {fileID: 5895172129738780608}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c6953aceda4fe4ebf32fe6e816f0b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1404070739 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 205092410192610579, guid: 5e74f02aabd7b7e42ada7b466cdba697,
-    type: 3}
-  m_PrefabInstance: {fileID: 5895172129738780608}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e1b8d1a99e653149ac40a1f5025963e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1678903228
 GameObject:
   m_ObjectHideFlags: 3
@@ -5396,7 +5406,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5950,7 +5960,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:

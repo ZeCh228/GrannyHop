@@ -16,7 +16,7 @@ public class Nasos : MonoBehaviour
     [SerializeField] MMF_Player MMF_Player;
     [SerializeField] Transform EffectTransform;
     public RaycastHit info;
-
+    [SerializeField] GrannyAnimation GrannyAnimation;
 
 
     private void FixedUpdate()
@@ -36,7 +36,7 @@ public class Nasos : MonoBehaviour
                     AudioSystem?.PlayDefAudio(colliders[0].name);
                 }
                 PlayerMovement.Jump(JumpPower);
-
+                GrannyAnimation.LandingAnim();
                 if (Physics.Raycast(spherePoint.position, spherePoint.TransformDirection(Vector3.down), out info, 20, groundLayer)) //TO DO FIX
                 {
                     var Position = info.point;

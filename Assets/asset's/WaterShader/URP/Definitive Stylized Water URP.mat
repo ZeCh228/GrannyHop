@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Definitive Stylized Water URP
   m_Shader: {fileID: 4800000, guid: 00a414d74c7f5df47b35668bbc5a4002, type: 3}
-  m_Parent: {fileID: 2100000, guid: 367087ab764312c4ca5381764b301c69, type: 2}
+  m_Parent: {fileID: 2100000, guid: 73ee7ef5d89cead4ba37e5578393a001, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -56,6 +56,6 @@ Material:
     m_Colors:
     - _DepthGradient1: {r: 0, g: 0.5425916, b: 1, a: 1}
     - _DepthGradient2: {r: 0, g: 0.538649, b: 1, a: 1}
-    - _DepthGradient3: {r: 0, g: 0.21094629, b: 0.4433177, a: 1}
+    - _DepthGradient3: {r: 0, g: 0.21093285, b: 0.4433043, a: 1}
     - _FresnelColor: {r: 0, g: 0.4647889, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -32,6 +32,6 @@ Material:
     - _MainFoamSpeed: 0.3
     - _SecondaryFoamScale: 1.03
     m_Colors:
-    - _DepthGradient1: {r: 0.438763, g: 0.8427246, b: 1, a: 1}
-    - _DepthGradient3: {r: 0.06369395, g: 0.1329526, b: 0.30137238, a: 1}
+    - _DepthGradient1: {r: 0.43876114, g: 0.8427246, b: 1, a: 1}
+    - _DepthGradient3: {r: 0.06369258, g: 0.13295087, b: 0.30137053, a: 1}
   m_BuildTextureStacks: []
