@@ -11,7 +11,7 @@ public class GrannyAnimation : MonoBehaviour
     void Update()
     {
         Anim.SetFloat("VelocityY", rb.velocity.y);
-       
+      
     }
 
     public void LandingAnim()
