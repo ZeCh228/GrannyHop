@@ -36,7 +36,7 @@ public class Nasos : MonoBehaviour
                     AudioSystem?.PlayDefAudio(colliders[0].name);
                 }
                 PlayerMovement.Jump(JumpPower);
-                GrannyAnimation.LandingAnim();
+                GrannyAnimation?.LandingAnim();
                 if (Physics.Raycast(spherePoint.position, spherePoint.TransformDirection(Vector3.down), out info, 20, groundLayer)) //TO DO FIX
                 {
                     var Position = info.point;
@@ -47,7 +47,7 @@ public class Nasos : MonoBehaviour
 
                     EffectTransform.rotation = Quaternion.LookRotation(Rotation, Vector3.forward);
 
-                    MMF_Player.PlayFeedbacks();
+                    MMF_Player?.PlayFeedbacks();
                 }
 
                 StartCoroutine(JumpCoolDown());

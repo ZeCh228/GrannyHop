@@ -12,30 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612e70f49e5124da0a95111a57250300, type: 3}
   m_Name: Sea Clouds
   m_EditorClassIdentifier: 
-  raymarchQuality: 6
-  raymarchMinStep: 0.25
-  jittering: 0.5
-  dithering: 1
+  raymarchQuality: 16
+  raymarchMinStep: 0.1
+  jittering: 0
+  dithering: 2
   renderQueue: 3100
   sortingLayerID: 0
   sortingOrder: 0
   constantDensity: 0
   noiseTexture: {fileID: 2800000, guid: 9c79340e1a1054275ba04070a27de306, type: 3}
   noiseTextureOptimizedSize: 256
-  noiseStrength: 1
-  noiseScale: 9
+  noiseStrength: 0.64
+  noiseScale: 3.48
   noiseFinalMultiplier: 1
-  useDetailNoise: 0
+  useDetailNoise: 1
   detailTexture: {fileID: 11700000, guid: 950add8d241c6479bbab1f10e1035d60, type: 2}
-  detailScale: 3.25
-  detailStrength: 0.653
-  detailOffset: -0.5
-  density: 1
+  detailScale: 5.18
+  detailStrength: 1
+  detailOffset: -0.49
+  density: 1.13
   shape: 0
   border: 0.061
-  customHeight: 1
-  height: 12.4
-  verticalOffset: 0
+  customHeight: 0
+  height: 10.16
+  verticalOffset: -0.18
   distance: 0
   distanceFallOff: 1
   maxDistance: 1000
@@ -48,7 +48,7 @@ MonoBehaviour:
   terrainFogHeight: 25
   terrainFogMinAltitude: 0
   terrainFogMaxAltitude: 150
-  albedo: {r: 0.8901961, g: 0.8901961, b: 0.8901961, a: 0.98039216}
+  albedo: {r: 0.8901961, g: 0.8901961, b: 0.8901961, a: 0.954}
   enableDepthGradient: 0
   depthGradient:
     serializedVersion: 2
@@ -113,10 +113,10 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   brightness: 1
-  deepObscurance: 1
+  deepObscurance: 1.23
   specularColor: {r: 1, g: 1, b: 0.8, a: 1}
-  specularThreshold: 0.6
-  specularIntensity: 0.5
+  specularThreshold: 0.947
+  specularIntensity: 0.591
   turbulence: 0
   windDirection: {x: 0.008, y: 0, z: 0}
   useCustomDetailNoiseWindDirection: 0
