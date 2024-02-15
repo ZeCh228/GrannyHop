@@ -52,6 +52,8 @@ public class CompleteLvlCanvas : MonoBehaviour
     public void EnableCanvas(float time, int stars) 
     {
         Canvas.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         TimeText.SetText(time.ToString());
 
         for(int i = 0; i < stars; i++) 

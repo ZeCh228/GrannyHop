@@ -9,11 +9,11 @@ public class CylinderCollderEditor : Editor
         DrawDefaultInspector();
 
         CylinderCollider script = (CylinderCollider)target;
-        if(GUILayout.Button("Build Object")) 
+        if (GUILayout.Button("Build Object"))
         {
             script.BuildCollider();
         }
-        if(GUILayout.Button("Clear Collider")) 
+        if (GUILayout.Button("Clear Collider"))
         {
             script.ClearCollider();
         }
