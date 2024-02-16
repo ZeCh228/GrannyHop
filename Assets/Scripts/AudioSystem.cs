@@ -50,7 +50,7 @@ public class AudioSystem : MonoBehaviour
     public void PlayDefAudio(string name)
     {
         Audio.PlayOneShot(WoodFloor[0]);
-        Debug.LogError($"GameObject {name} NET MATERIALA IDIOT");
+        /*Debug.LogError($"GameObject {name} NET MATERIALA IDIOT");*/
     }
 
 }

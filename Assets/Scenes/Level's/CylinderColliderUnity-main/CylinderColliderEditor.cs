@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(CylinderCollider))]
+/*[CustomEditor(typeof(CylinderCollider))]
 public class CylinderCollderEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -18,4 +18,4 @@ public class CylinderCollderEditor : Editor
             script.ClearCollider();
         }
     }
-}
+}*/

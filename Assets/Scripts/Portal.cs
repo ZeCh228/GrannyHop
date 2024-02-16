@@ -26,7 +26,7 @@ public class Portal : MonoBehaviour
 
              DissolvePortal.StartDissolve();
 
-             canvas.EnableCanvas(TimeStars.GetTime(), TimeStars.CalculateStars());
+             canvas.EnableCanvas(TimeStars.GetTime()); /*TimeStars.CalculateStars()*/
         }
     }
 }

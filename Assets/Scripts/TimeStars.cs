@@ -5,10 +5,10 @@ using UnityEngine;
 public class TimeStars : MonoBehaviour
 {
     private float time;
-    [SerializeField] float MiddleTime;
-    [SerializeField] float AdditionalTime = 10;
+    /*[SerializeField] float MiddleTime;
+    [SerializeField] float AdditionalTime = 10;*/
 
-    public int CalculateStars()
+    /*public int CalculateStars()
     {
         GetTime();
         var StarsCount = 0; 
@@ -29,7 +29,7 @@ public class TimeStars : MonoBehaviour
         }
 
         return StarsCount;
-    }
+    }*/
     
 
     public float GetTime()

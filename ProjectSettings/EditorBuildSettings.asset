@@ -20,6 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level's/1 Level Block/Level 4.unity
     guid: 2a2d8a8949f142c4c9cf84e5a864e367
+  - enabled: 1
+    path: Assets/Scenes/Level's/2 Level Block/Level 5.unity
+    guid: 2fbdd572749cdee4f915139ecafecca1
+  - enabled: 1
+    path: Assets/Scenes/Level's/2 Level Block/Level 6.unity
+    guid: f8fae49167e33734c9f1d4e356a331c8
+  - enabled: 1
+    path: Assets/Scenes/Level's/2 Level Block/Level 7.unity
+    guid: 864b77566f36afc429fe2bc7c9d2a570
+  - enabled: 1
+    path: Assets/Scenes/Level's/2 Level Block/Level 8.unity
+    guid: 4214f823ef42c2744a563809530a3999
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 56b8b47eff90c244d8b7ff9e4d4ecec3,
       type: 2}
