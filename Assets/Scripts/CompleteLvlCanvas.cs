@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class CompleteLvlCanvas : MonoBehaviour
 {
-    //[SerializeField] GameObject[] Stars;
+    
+    public int SceneIndex;
     [SerializeField] TextMeshProUGUI TimeText;
     [SerializeField] GameObject Canvas;
+    //[SerializeField] GameObject[] Stars;
+    //[SerializeField] int NextSceneLoad;
 
     private void Start()
     {
@@ -31,14 +34,29 @@ public class CompleteLvlCanvas : MonoBehaviour
     
     public void NextLevel() 
     {
-        int SceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if(SceneManager.GetActiveScene().buildIndex == 8) 
+        {
+            Debug.Log("The End");
+        }
+        else 
+        {
+            SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            SceneManager.LoadScene(SceneIndex);
+
+            if (SceneIndex > PlayerPrefs.GetInt("level"))
+            {
+                PlayerPrefs.SetInt("level", SceneIndex);
+            }
+        }
+
+        /*SceneIndex = SceneManager.GetActiveScene().buildIndex;
         var AllCountScene = SceneManager.sceneCountInBuildSettings;
 
         if (SceneIndex + 1 < AllCountScene) 
         {
             SceneManager.LoadScene(SceneIndex + 1);
-        }
-        Debug.Log("next LVL");
+        }*/
+        
     }
 
 
