@@ -41,12 +41,7 @@ public class CompleteLvlCanvas : MonoBehaviour
         else 
         {
             SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            SceneManager.LoadScene(SceneIndex);
-
-            if (SceneIndex > PlayerPrefs.GetInt("level"))
-            {
-                PlayerPrefs.SetInt("level", SceneIndex);
-            }
+            SceneManager.LoadScene(SceneIndex);    
         }
 
         /*SceneIndex = SceneManager.GetActiveScene().buildIndex;

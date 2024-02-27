@@ -17,7 +17,14 @@ public class Portal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
-        { 
+        {
+            var SceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            
+            if (SceneIndex > PlayerPrefs.GetInt("level"))
+            {
+                PlayerPrefs.SetInt("level", SceneIndex);
+            }
+
              Nasos.enabled = false;
              rb.isKinematic = true;
              Rotate.enabled = false;
